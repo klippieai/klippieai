@@ -1,0 +1,36 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+env:
+  REACT_APP_API_ENDPOINT: ${{ secrets.REACT_APP_API_ENDPOINT }}
+  REACT_APP_GCS_BUCKET: ${{ secrets.REACT_APP_GCS_BUCKET }}
+
+jobs:
+  deploy_gh_pages:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    if: "contains(github.event.head_commit.message, 'to deploy')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install & build
+        run: |
+          npm install --force
+          npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.4
+
+        with:
+          branch: gh-pages
+          folder: build

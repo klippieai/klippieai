@@ -1,1 +1,1 @@
-# klippieai
+# short-clip-gen
