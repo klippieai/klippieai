@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/klippieai/static/css/main.345ec4e7.css",
+    "main.js": "/klippieai/static/js/main.7a02fc24.js",
+    "static/js/787.c1112931.chunk.js": "/klippieai/static/js/787.c1112931.chunk.js",
+    "index.html": "/klippieai/index.html",
+    "main.345ec4e7.css.map": "/klippieai/static/css/main.345ec4e7.css.map",
+    "main.7a02fc24.js.map": "/klippieai/static/js/main.7a02fc24.js.map",
+    "787.c1112931.chunk.js.map": "/klippieai/static/js/787.c1112931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.345ec4e7.css",
+    "static/js/main.7a02fc24.js"
+  ]
+}
